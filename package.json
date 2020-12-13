@@ -10,8 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/mih-ana/cypress-demo.git"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "Ana ",
   "license": "ISC",
   "bugs": {
@@ -20,5 +19,10 @@
   "homepage": "https://github.com/mih-ana/cypress-demo#readme",
   "devDependencies": {
     "cypress": "^6.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
   }
 }
