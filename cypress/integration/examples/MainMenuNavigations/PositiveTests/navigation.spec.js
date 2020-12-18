@@ -54,33 +54,33 @@ describe('MainMenuNavigations - Positive Tests', () => {
     //})
 
     //Click on the About menu item, then go back, go forward and go back again - The user should be redirected to the Inventory page
-    it('Click on the About menu item', () => {
-        cy.get('#about_sidebar_link').click()
-        cy.wait(2000)
-        cy.url().should('eq', 'https://saucelabs.com/')
-        cy.go('back')
-        cy.wait(2000)
-        cy.url().should('eq', 'https://www.saucedemo.com/inventory.html')
-        cy.go('forward')
-        cy.wait(2000)
-        cy.url().should('eq', 'https://saucelabs.com/')
-        cy.go('back')
-        cy.wait(2000)
-        cy.url().should('eq', 'https://www.saucedemo.com/inventory.html')
-    })
+    // it('Click on the About menu item', () => {
+    //     cy.get('#about_sidebar_link').click()
+    //     cy.wait(2000)
+    //     cy.url().should('eq', 'https://saucelabs.com/')
+    //     cy.go('back')
+    //     cy.wait(2000)
+    //     cy.url().should('eq', 'https://www.saucedemo.com/inventory.html')
+    //     cy.go('forward')
+    //     cy.wait(2000)
+    //     cy.url().should('eq', 'https://saucelabs.com/')
+    //     cy.go('back')
+    //     cy.wait(2000)
+    //     cy.url().should('eq', 'https://www.saucedemo.com/inventory.html')
+    // })
 
     //     //Close the navbar by clicking on the 'x' button - The navbar should be closed
-    //     it('Close the navbar by clicking on the button', () => {
-    //         cy.get('#menu_button_container > div > div.bm-menu-wrap > div:nth-child(2) > div > button').click()
-    //         cy.wait(2000)
-    //         cy.get('.bm-menu').should('not.exist')
-    //     })
+        it('Close the navbar by clicking on the button', () => {
+            cy.get('#menu_button_container > div > div.bm-menu-wrap > div:nth-child(2) > div > button').click()
+            cy.wait(2000)
+            cy.get('.bm-menu').should('not.be.visible')
+        })
 
     //     //Close the navbar by clicking anywhere on the page - The navbar should be closed
     //     it('Close the navbar by clicking anywhere on the page', () => {
     //         cy.get('#menu_button_container > div > div.bm-overlay').click()
     //         cy.wait(2000)
-    //         cy.get('.bm-menu').should('not.exist')
+    //         cy.get('.bm-menu').should('not.be.visible')
     //     })
 
     //     //Click on the Logout menu item - The user should be logged out
