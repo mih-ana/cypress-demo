@@ -70,24 +70,24 @@ describe('MainMenuNavigations - Positive Tests', () => {
     // })
 
     //     //Close the navbar by clicking on the 'x' button - The navbar should be closed
-        it('Close the navbar by clicking on the button', () => {
-            cy.get('#menu_button_container > div > div.bm-menu-wrap > div:nth-child(2) > div > button').click()
+        // it('Close the navbar by clicking on the button', () => {
+        //     cy.get('#menu_button_container > div > div.bm-menu-wrap > div:nth-child(2) > div > button').click()
+        //     cy.wait(2000)
+        //     cy.get('.bm-menu').should('not.be.visible')
+        // })
+
+    //     //Close the navbar by clicking anywhere on the page - The navbar should be closed
+        it('Close the navbar by clicking anywhere on the page', () => {
+            cy.get('#menu_button_container > div > div.bm-overlay').click()
             cy.wait(2000)
             cy.get('.bm-menu').should('not.be.visible')
         })
-
-    //     //Close the navbar by clicking anywhere on the page - The navbar should be closed
-    //     it('Close the navbar by clicking anywhere on the page', () => {
-    //         cy.get('#menu_button_container > div > div.bm-overlay').click()
-    //         cy.wait(2000)
-    //         cy.get('.bm-menu').should('not.be.visible')
-    //     })
 
     //     //Click on the Logout menu item - The user should be logged out
     //     it('Click on the Logout menu item', () => {
     //         cy.get('#logout_sidebar_link').click()
     //         cy.wait(2000)
-    //         expect(location.href).to.eq('https://www.saucedemo.com/index.html')
+    //         cy.url().should('eq','https://www.saucedemo.com/index.html')
     //     })
     // })
 
