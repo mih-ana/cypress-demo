@@ -25,7 +25,7 @@ before(() => {
             cy.wait(2000)
             cy.get('#menu_button_container > div > div:nth-child(3) > div > button').contains('Open Menu').click()
             cy.wait(2000)
-            cy.get('.bm-menu').should('exist')
+            cy.get('.bm-menu').should('be.visible')
         })
 
         //Reload the page
