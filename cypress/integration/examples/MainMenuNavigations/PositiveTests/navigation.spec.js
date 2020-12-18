@@ -77,19 +77,19 @@ describe('MainMenuNavigations - Positive Tests', () => {
         // })
 
     //     //Close the navbar by clicking anywhere on the page - The navbar should be closed
-        it('Close the navbar by clicking anywhere on the page', () => {
-            cy.get('#menu_button_container > div > div.bm-overlay').click()
-            cy.wait(2000)
-            cy.get('.bm-menu').should('not.be.visible')
-        })
+        // it('Close the navbar by clicking anywhere on the page', () => {
+        //     cy.get('#menu_button_container > div > div.bm-overlay').click()
+        //     cy.wait(2000)
+        //     cy.get('.bm-menu').should('not.be.visible')
+        // })
 
     //     //Click on the Logout menu item - The user should be logged out
-    //     it('Click on the Logout menu item', () => {
-    //         cy.get('#logout_sidebar_link').click()
-    //         cy.wait(2000)
-    //         cy.url().should('eq','https://www.saucedemo.com/index.html')
-    //     })
-    // })
+        it('Click on the Logout menu item', () => {
+            cy.get('#logout_sidebar_link').click()
+            cy.wait(2000)
+            cy.url().should('eq','https://www.saucedemo.com/index.html')
+        })
+  //  })
 
 
 })
