@@ -28,30 +28,17 @@ describe('SortItems - Positive Tests', () => {
   })
 
   //Select the second dropdown option
-  it('Select an option in the items dropdown', () => {
-    cy.get('#inventory_filter_container > select').select('Name (Z to A)')
-    cy.get('#inventory_filter_container > select > option:nth-child(2)').should('have.value', 'za')
+  it('Select the second option in the items dropdown', () => {
+    cy.get('.product_sort_container').select('Name (Z to A)').should('have.value', 'za')
   })
-  
-    /*   cy.get('.action-select-multiple')
-         .select(['apples', 'oranges', 'bananas'])
-         // when getting multiple values, invoke "val" method first
-         .invoke('val')
-         .should('deep.equal', ['fr-apples', 'fr-oranges', 'fr-bananas'])
-   
-       // Select option(s) with matching value
-       cy.get('.action-select').select('fr-bananas')
-         // can attach an assertion right away to the element
-         .should('have.value', 'fr-bananas')
-   
-       cy.get('.action-select-multiple')
-         .select(['fr-apples', 'fr-oranges', 'fr-bananas'])
-         .invoke('val')
-         .should('deep.equal', ['fr-apples', 'fr-oranges', 'fr-bananas'])
-   
-       // assert the selected values include oranges
-       cy.get('.action-select-multiple')
-         .invoke('val').should('include', 'fr-oranges')
-     })
-     */
+
+  //Select the third dropdown option
+  it('Select the third option in the items dropdown', () => {
+    cy.get('.product_sort_container').select('Price (low to high)').should('have.value', 'lohi')
+  })
+
+  //Select the fourth dropdown option
+  it('Select the fourth option in the items dropdown', () => {
+    cy.get('.product_sort_container').select('Price (high to low)').should('have.value', 'hilo')
+  })
 })
